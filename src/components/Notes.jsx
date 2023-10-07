@@ -1,7 +1,18 @@
 import React from 'react'
 
-export default function Notes() {
+export default function Notes(props) {
+
+    const handleClick = () => {
+        props.onDelete(props.id)
+    }
+
   return (
-    <div>Notes</div>
+    <div className='note'>
+    <h1>{props.title}</h1>
+    <p>{props.content}</p>
+    <button onClick={handleClick}>
+        delete
+    </button>
+    </div>
   )
 }

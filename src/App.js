@@ -27,11 +27,30 @@ function App() {
     )
   }
 
+  console.log("first")
+  console.log(notes)
+
+  // function n() {
+    
+  //   const titles = notes.map((x, i) => {
+  //     const t = x.title;
+  //     return t;
+  //   });
+  
+  //   return titles;  
+  // }
+  
+  // console.log("calling fn");
+  // console.log(n());  
+  
+
   return (
  <>
    <Header/>
    <CreateArea onAdd = {addNote}/>
    {notes.map((noteItem, index) => {
+    if(noteItem.title || noteItem.content !== ""){
+      return(
    <Notes
     key={index}
     id={index}
@@ -39,7 +58,11 @@ function App() {
     content={noteItem.content}
     onDelete = {deleteNote}
    />
-  })}
+      );
+    } else{
+      return null;
+    }
+   })}
    <Footer/>
  </>
   );

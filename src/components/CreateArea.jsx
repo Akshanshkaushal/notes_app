@@ -40,9 +40,10 @@ const expand = ()=>{
 
   return (
     <div>
-        <form>
-           {isExpanded &&( <input
-            name='title'
+        <form className='create-note'>
+           {isExpanded &&( 
+            <input
+                name='title'
                 value={note.title}
                 onChange={handleChange}
                 placeholder='Enter title'
@@ -57,6 +58,10 @@ const expand = ()=>{
                 placeholder='enter note'
                 rows={isExpanded ? 3 : 1}
             />
+
+            <button onClick={submitNote}>
+                +
+            </button>
         </form>
     </div>
   )
