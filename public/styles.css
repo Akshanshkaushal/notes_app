@@ -1,21 +1,23 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
  
-body{
+body {
     background-color: #faf7f7;
-background-image: url(http://www.transparenttextures.com/patterns/brick-wall.png); 
+    background-image: url(http://www.transparenttextures.com/patterns/brick-wall.png); 
 }
 
-header{
+header {
     background-color: rgb(139, 171, 250);
     padding: 1rem;
     width: 100vw;  
 }
 
-header h1{
+
+
+header h1 {
     color: white;
 }
 
@@ -25,40 +27,12 @@ footer {
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-   }
-  
-   footer p {
+}
+
+footer p {
     color: #ccc;
-  }
- 
-  /* form.create-note {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;  
-    border: none;
-    border-radius: 7px;
-    background-color: #faf7f7;
-    box-shadow: 0 1px 3px rgb(148, 147, 147);
-    flex-basis: auto ;
-   }
-  
+}
 
-  form.create-note input,
-  form.create-note textarea{
-    display: flex;
-    flex-grow: 0.2;
-    padding: 1rem;
-   font-size: 1.2rem;
- border: none;
- outline: none;
- resize: none;
-  }  */
-
- 
-   
 form.create-note {
     position: relative;
     width: 30rem;
@@ -67,21 +41,22 @@ form.create-note {
     padding: 15px;
     border-radius: 7px;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
-  }
-  form.create-note input,
-  form.create-note textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+form.create-note input,
+form.create-note textarea {
     border: none;
     padding: 4px;
     outline: none;
     font-size: 1.2em;
     font-family: inherit;
     resize: none;
-  }
+    margin-bottom: 10px;  
+}
 
-   
- 
-
-  form.create-note button {
+form.create-note button {
     position: absolute;
     right: 18px;
     bottom: -18px;
@@ -95,35 +70,55 @@ form.create-note {
     box-shadow: 0 1px 3px rgb(126, 125, 125);
     cursor: pointer;
     outline: none;
-  }
-
+}
 
 .note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
 }
+
 .note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
+    font-size: 1.1em;
+    margin-bottom: 6px;
 }
+
 .note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 .note button {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  color: #f5ba13;
-  border: none;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  outline: none;
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #f5ba13;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+}
+
+
+@media (max-width: 768px) {
+    header {
+     display: inline-block;
+     width: 133%;
+    }
+
+    form.create-note {
+        width: 18rem;
+         margin: 2.3rem;
+    }
+
+    .note {
+   padding: 10px;
+        width: 240px;
+        margin: 1.5rem 3.5rem;
+    }
 }
